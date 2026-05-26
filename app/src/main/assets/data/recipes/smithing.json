@@ -178,7 +178,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 12.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "iron_dagger": {
     "type": "equipment",
@@ -189,7 +190,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 25,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "steel_dagger": {
     "type": "equipment",
@@ -200,7 +202,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 37.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "mithril_dagger": {
     "type": "equipment",
@@ -211,7 +214,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 50.0,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "air"
   },
   "adamantite_dagger": {
     "type": "equipment",
@@ -222,7 +226,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 62.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "runite_dagger": {
     "type": "equipment",
@@ -233,7 +238,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 75.0,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "dark"
   },
   "bronze_sword": {
     "type": "equipment",
@@ -244,7 +250,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 12.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "iron_sword": {
     "type": "equipment",
@@ -255,7 +262,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 25,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "steel_sword": {
     "type": "equipment",
@@ -266,7 +274,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 37.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "mithril_sword": {
     "type": "equipment",
@@ -277,7 +286,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 50.0,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "air"
   },
   "adamantite_sword": {
     "type": "equipment",
@@ -288,7 +298,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 62.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "runite_sword": {
     "type": "equipment",
@@ -299,7 +310,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 75.0,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "dark"
   },
   "bronze_scimitar": {
     "type": "equipment",
@@ -310,7 +322,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 25,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "iron_scimitar": {
     "type": "equipment",
@@ -321,7 +334,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 50,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "steel_scimitar": {
     "type": "equipment",
@@ -332,7 +346,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 75,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "mithril_scimitar": {
     "type": "equipment",
@@ -343,7 +358,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 115.0,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "air"
   },
   "adamantite_scimitar": {
     "type": "equipment",
@@ -354,7 +370,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 143.8,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "runite_scimitar": {
     "type": "equipment",
@@ -365,7 +382,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 172.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "dark"
   },
   "bronze_longsword": {
     "type": "equipment",
@@ -376,7 +394,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 25,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "iron_longsword": {
     "type": "equipment",
@@ -387,7 +406,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 50,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "steel_longsword": {
     "type": "equipment",
@@ -398,7 +418,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 75,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "mithril_longsword": {
     "type": "equipment",
@@ -409,7 +430,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 115.0,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "air"
   },
   "adamantite_longsword": {
     "type": "equipment",
@@ -420,7 +442,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 143.8,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "runite_longsword": {
     "type": "equipment",
@@ -431,7 +454,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 172.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "dark"
   },
   "bronze_2h_sword": {
     "type": "equipment",
@@ -442,7 +466,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 37.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "iron_2h_sword": {
     "type": "equipment",
@@ -453,7 +478,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 75,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "steel_2h_sword": {
     "type": "equipment",
@@ -464,7 +490,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 112.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "mithril_2h_sword": {
     "type": "equipment",
@@ -475,7 +502,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 232.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "air"
   },
   "adamantite_2h_sword": {
     "type": "equipment",
@@ -486,7 +514,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 290.6,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "runite_2h_sword": {
     "type": "equipment",
@@ -497,7 +526,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 348.8,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "dark"
   },
   "bronze_warhammer": {
     "type": "equipment",
@@ -508,7 +538,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 37.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "iron_warhammer": {
     "type": "equipment",
@@ -519,7 +550,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 75,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "steel_warhammer": {
     "type": "equipment",
@@ -530,7 +562,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 112.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "mithril_warhammer": {
     "type": "equipment",
@@ -541,7 +574,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 232.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "air"
   },
   "adamantite_warhammer": {
     "type": "equipment",
@@ -552,7 +586,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 290.6,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "runite_warhammer": {
     "type": "equipment",
@@ -563,7 +598,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 348.8,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "dark"
   },
   "bronze_battleaxe": {
     "type": "equipment",
@@ -574,7 +610,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 37.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "iron_battleaxe": {
     "type": "equipment",
@@ -585,7 +622,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 75,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "steel_battleaxe": {
     "type": "equipment",
@@ -596,7 +634,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 112.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "mithril_battleaxe": {
     "type": "equipment",
@@ -607,7 +646,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 232.5,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "air"
   },
   "adamantite_battleaxe": {
     "type": "equipment",
@@ -618,7 +658,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 290.6,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "ground"
   },
   "runite_battleaxe": {
     "type": "equipment",
@@ -629,7 +670,8 @@
     },
     "output_quantity": 1,
     "xp_per_item": 348.8,
-    "time_per_item": 60
+    "time_per_item": 60,
+    "element_type": "dark"
   },
   "bronze_med_helmet": {
     "type": "equipment",
