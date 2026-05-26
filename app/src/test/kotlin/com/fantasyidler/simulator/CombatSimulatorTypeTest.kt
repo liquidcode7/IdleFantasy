@@ -13,12 +13,12 @@ import org.junit.Test
 /**
  * Verifies that CombatSimulator applies TypeRegistry multipliers to player damage.
  *
- * Strategy: run the same dungeon twice with identical player stats but different
- * weapon types. A strong-type weapon (fire vs ground enemy) should produce higher
- * total player damage than a null-type weapon over the same session.
+ * Strategy: run the same dungeon 10 times with identical player stats but different
+ * weapon types. A strong-type weapon (ice vs ground enemy, 2 steps CW = 1.5×) should
+ * produce higher total player damage than a null-type weapon over the same session.
  *
- * Uses a fixed Random seed indirectly by running enough ticks that the law of large
- * numbers dominates — total damage over 60 frames with 25 ticks each is stable.
+ * Averaging across 10 runs dominates Random(System.nanoTime()) variance — total damage
+ * over 600 frames × 25 ticks each is statistically stable.
  */
 class CombatSimulatorTypeTest {
 
