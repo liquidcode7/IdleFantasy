@@ -130,7 +130,8 @@ class GameDataRepository @Inject constructor(
     // ------------------------------------------------------------------ equipment
 
     val equipment: Map<String, EquipmentData> by lazy {
-        asset("data/equipment.json")
+        val base: Map<String, EquipmentData> = asset("data/equipment.json")
+        mergeWeaponTypes(base, smithingRecipes, fletchingRecipes)
     }
 
     // ------------------------------------------------------------------ recipes
@@ -278,5 +279,29 @@ class GameDataRepository @Inject constructor(
         fletchingRecipes[key]?.let { return it.displayName }
         craftingRecipes[key]?.let { return it.displayName }
         return key.split('_').joinToString(" ") { it.replaceFirstChar { c -> c.uppercase() } }
+    }
+}
+
+/**
+ * Merges [elementType] from recipe data into the static equipment map.
+ *
+ * For each recipe key with a non-null [SmithingRecipe.elementType] or
+ * [FletchingRecipe.elementType], overwrites [EquipmentData.type] on the
+ * matching equipment entry. Keys absent from [equipment] are ignored silently.
+ *
+ * Internal so it can be unit-tested directly.
+ */
+internal fun mergeWeaponTypes(
+    equipment: Map<String, EquipmentData>,
+    smithingRecipes: Map<String, SmithingRecipe>,
+    fletchingRecipes: Map<String, FletchingRecipe>,
+): Map<String, EquipmentData> {
+    val types = buildMap<String, String> {
+        smithingRecipes.forEach { (k, r) -> r.elementType?.let { put(k, it) } }
+        fletchingRecipes.forEach { (k, r) -> r.elementType?.let { put(k, it) } }
+    }
+    return equipment.mapValues { (k, v) ->
+        val t = types[k] ?: return@mapValues v
+        v.copy(type = t)
     }
 }
