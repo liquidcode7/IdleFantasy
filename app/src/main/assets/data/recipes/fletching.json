@@ -115,7 +115,8 @@
     "combat_style": "ranged",
     "attack_bonus": 8,
     "strength_bonus": 0,
-    "requirements": {}
+    "requirements": {},
+    "element_type": "ground"
   },
   "oak_shortbow": {
     "item_name": "oak_shortbow",
@@ -133,7 +134,8 @@
     "strength_bonus": 0,
     "requirements": {
       "ranged": 5
-    }
+    },
+    "element_type": "ground"
   },
   "willow_shortbow": {
     "item_name": "willow_shortbow",
@@ -151,7 +153,8 @@
     "strength_bonus": 0,
     "requirements": {
       "ranged": 20
-    }
+    },
+    "element_type": "water"
   },
   "maple_shortbow": {
     "item_name": "maple_shortbow",
@@ -169,7 +172,8 @@
     "strength_bonus": 0,
     "requirements": {
       "ranged": 30
-    }
+    },
+    "element_type": "air"
   },
   "yew_shortbow": {
     "item_name": "yew_shortbow",
@@ -187,7 +191,8 @@
     "strength_bonus": 0,
     "requirements": {
       "ranged": 40
-    }
+    },
+    "element_type": "light"
   },
   "magic_shortbow": {
     "item_name": "magic_shortbow",
@@ -205,7 +210,8 @@
     "strength_bonus": 0,
     "requirements": {
       "ranged": 50
-    }
+    },
+    "element_type": "dark"
   },
   "staff_of_air": {
     "item_name": "staff_of_air",
@@ -224,7 +230,8 @@
     "strength_bonus": 6,
     "requirements": {
       "magic": 1
-    }
+    },
+    "element_type": "air"
   },
   "staff_of_water": {
     "item_name": "staff_of_water",
@@ -243,7 +250,8 @@
     "strength_bonus": 8,
     "requirements": {
       "magic": 5
-    }
+    },
+    "element_type": "water"
   },
   "staff_of_earth": {
     "item_name": "staff_of_earth",
@@ -262,7 +270,8 @@
     "strength_bonus": 11,
     "requirements": {
       "magic": 10
-    }
+    },
+    "element_type": "ground"
   },
   "staff_of_fire": {
     "item_name": "staff_of_fire",
@@ -281,7 +290,8 @@
     "strength_bonus": 15,
     "requirements": {
       "magic": 15
-    }
+    },
+    "element_type": "fire"
   },
   "staff_of_mind": {
     "item_name": "staff_of_mind",
@@ -300,7 +310,8 @@
     "strength_bonus": 20,
     "requirements": {
       "magic": 25
-    }
+    },
+    "element_type": "neutral"
   },
   "staff_of_chaos": {
     "item_name": "staff_of_chaos",
@@ -319,7 +330,8 @@
     "strength_bonus": 26,
     "requirements": {
       "magic": 35
-    }
+    },
+    "element_type": "dark"
   },
   "staff_of_death": {
     "item_name": "staff_of_death",
@@ -338,7 +350,8 @@
     "strength_bonus": 33,
     "requirements": {
       "magic": 50
-    }
+    },
+    "element_type": "dark"
   },
   "staff_of_blood": {
     "item_name": "staff_of_blood",
@@ -357,6 +370,7 @@
     "strength_bonus": 41,
     "requirements": {
       "magic": 65
-    }
+    },
+    "element_type": "fire"
   }
 }
