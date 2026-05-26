@@ -6,6 +6,7 @@ import com.fantasyidler.data.json.EnemyData
 import com.fantasyidler.data.model.SessionFrame
 import com.fantasyidler.data.model.Skills
 import kotlin.math.max
+import kotlin.math.roundToInt
 import kotlin.random.Random
 
 /**
@@ -38,6 +39,7 @@ object CombatSimulator {
         foodHealValues: Map<String, Int> = emptyMap(),
         potionBonuses: Map<String, Int> = emptyMap(),
         availableArrows: Map<String, Int> = emptyMap(),
+        playerWeaponType: String? = null,
     ): SkillSimulator.Result {
         val effAttack   = playerAttack   + (potionBonuses["attack"]   ?: 0)
         val effStrength = playerStrength + (potionBonuses["strength"] ?: 0)
@@ -105,6 +107,11 @@ object CombatSimulator {
                 }
             }
 
+            // Scale player max hit by type effectiveness (weapon type vs this enemy's type).
+            // TypeRegistry returns 1.0 if either side is null or "neutral".
+            val typeMult = TypeRegistry.multiplier(playerWeaponType, enemy.type)
+            val effectivePlayerMaxHit = (playerMaxHit * typeMult).roundToInt().coerceAtLeast(1)
+
             val playerHitChance = when {
                 playerEffAtk > enemyDefStat ->
                     1.0 - enemyDefStat / (2.0 * playerEffAtk.coerceAtLeast(1))
@@ -136,10 +143,10 @@ object CombatSimulator {
                     combatStyle == "ranged" && arrowsLeft > 0 -> {
                         arrowsLeft--
                         frameArrowsUsed++
-                        if (rnd.nextDouble() < playerHitChance) rnd.nextInt(0, playerMaxHit + 1) else 0
+                        if (rnd.nextDouble() < playerHitChance) rnd.nextInt(0, effectivePlayerMaxHit + 1) else 0
                     }
                     combatStyle == "ranged" -> 0
-                    else -> if (rnd.nextDouble() < playerHitChance) rnd.nextInt(0, playerMaxHit + 1) else 0
+                    else -> if (rnd.nextDouble() < playerHitChance) rnd.nextInt(0, effectivePlayerMaxHit + 1) else 0
                 }
                 framePlayerHits += pDmg
                 enemyHp -= pDmg
