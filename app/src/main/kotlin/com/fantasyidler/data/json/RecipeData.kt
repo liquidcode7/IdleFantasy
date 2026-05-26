@@ -13,6 +13,7 @@ data class SmithingRecipe(
     @SerialName("output_quantity") val outputQuantity: Int,
     @SerialName("xp_per_item") val xpPerItem: Double,
     @SerialName("time_per_item") val timePerItem: Int,
+    @SerialName("element_type") val elementType: String? = null,
 )
 
 /** Cooking recipe — raw → cooked transformation. */
@@ -42,6 +43,7 @@ data class FletchingRecipe(
     @SerialName("attack_bonus")   val attackBonus:   Int? = null,
     @SerialName("strength_bonus") val strengthBonus: Int? = null,
     val requirements: Map<String, Int> = emptyMap(),
+    @SerialName("element_type") val elementType: String? = null,
 )
 
 /** Crafting recipe — jewellery and other items from precious materials. */
