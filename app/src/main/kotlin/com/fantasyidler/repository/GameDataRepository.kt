@@ -22,6 +22,7 @@ import com.fantasyidler.data.json.PetData
 import com.fantasyidler.data.json.DailyQuestTemplate
 import com.fantasyidler.data.json.QuestData
 import com.fantasyidler.data.json.RuneData
+import com.fantasyidler.data.json.TypeEffectivenessData
 import com.fantasyidler.data.json.SkillData
 import com.fantasyidler.data.json.SmithingRecipe
 import com.fantasyidler.data.json.SpellData
@@ -55,6 +56,12 @@ class GameDataRepository @Inject constructor(
 
     private inline fun <reified T> asset(path: String): T =
         json.decodeFromString<T>(loadAsset(path))
+
+    // ------------------------------------------------------------------ type effectiveness
+
+    val typeEffectiveness: TypeEffectivenessData by lazy {
+        asset("data/type_effectiveness.json")
+    }
 
     // ------------------------------------------------------------------ enemies
 

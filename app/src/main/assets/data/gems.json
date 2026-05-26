@@ -3,24 +3,28 @@
     "display_name": "Sapphire",
     "description": "A common blue gem used in jewelry crafting.",
     "drop_rate": 0.02,
-    "rarity": "common"
+    "rarity": "common",
+    "type": "water"
   },
   "emerald": {
     "display_name": "Emerald",
     "description": "An uncommon green gem used in jewelry crafting.",
     "drop_rate": 0.01,
-    "rarity": "uncommon"
+    "rarity": "uncommon",
+    "type": "ground"
   },
   "ruby": {
     "display_name": "Ruby",
     "description": "A rare red gem used in jewelry crafting.",
     "drop_rate": 0.005,
-    "rarity": "rare"
+    "rarity": "rare",
+    "type": "fire"
   },
   "diamond": {
     "display_name": "Diamond",
     "description": "A very rare precious gem used in jewelry crafting.",
     "drop_rate": 0.002,
-    "rarity": "very_rare"
+    "rarity": "very_rare",
+    "type": "light"
   }
 }

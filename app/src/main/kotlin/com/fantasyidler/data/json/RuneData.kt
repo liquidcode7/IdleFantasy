@@ -11,4 +11,5 @@ data class RuneData(
     @SerialName("xp_per_rune")   val xpPerRune: Double,
     @SerialName("time_per_rune") val timePerRune: Int,
     val description: String = "",
+    val type: String? = null,
 )

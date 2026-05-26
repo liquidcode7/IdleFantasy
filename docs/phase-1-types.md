@@ -32,6 +32,7 @@ creative call. Suggested starting point below — adjust to taste.
 | mithril_ore | Air | Light, ethereal metal |
 | adamantite_ore | Ground | Sturdy earth |
 | runite_ore | Dark | Mystical, deep arcane |
+| platinum_ore | Lightning | Not in original table — added in implementation. Lightning has no other ore representation; "platinum conducts electricity" is a strong thematic hook. |
 
 ### Logs (from `trees.json` — assign to the log output, not the tree)
 
@@ -64,7 +65,11 @@ Runes are already thematically typed — easy mapping:
 | mind_rune | (special — catalyst) |
 | chaos_rune | Dark |
 | death_rune | Dark |
-| blood_rune | Dark |
+| blood_rune | Fire |
+
+> **Decision note:** `blood_rune` was assigned **Fire** (not Dark as originally suggested)
+> to give the rune set better type spread and lean into blood as primal heat / life-force
+> rather than grouping three dark runes at the top tier.
 
 No Lightning, Ice, or Light runes exist yet. Don't add them in Phase 1 —
 just type what's there.

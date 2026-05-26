@@ -1,0 +1,6 @@
+{
+  "wheel_order": ["fire", "dark", "ice", "light", "ground", "lightning", "air", "water"],
+  "strong_multiplier": 1.5,
+  "weak_multiplier": 0.67,
+  "neutral_multiplier": 1.0
+}

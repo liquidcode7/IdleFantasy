@@ -13,6 +13,7 @@ data class OreData(
     @SerialName("level_required") val levelRequired: Int,
     @SerialName("xp_per_ore") val xpPerOre: Int,
     @SerialName("time_per_ore") val timePerOre: Int,
+    val type: String? = null,
 )
 
 // ---------------------------------------------------------------------------
@@ -27,6 +28,7 @@ data class TreeData(
     @SerialName("level_required") val levelRequired: Int,
     @SerialName("xp_per_log") val xpPerLog: Int,
     @SerialName("time_per_log") val timePerLog: Int,
+    val type: String? = null,
 )
 
 // ---------------------------------------------------------------------------
@@ -39,6 +41,7 @@ data class GemData(
     val description: String,
     @SerialName("drop_rate") val dropRate: Double,
     val rarity: String,
+    val type: String? = null,
 )
 
 // ---------------------------------------------------------------------------
@@ -91,6 +94,7 @@ data class FishData(
     @SerialName("level_required")  val levelRequired: Int,
     @SerialName("xp_per_catch")    val xpPerCatch: Int,
     @SerialName("time_per_catch")  val timePerCatch: Int,
+    val type: String? = null,
 )
 
 // ---------------------------------------------------------------------------
@@ -103,4 +107,5 @@ data class LogData(
     @SerialName("level_required") val levelRequired: Int,
     @SerialName("xp_per_log")     val xpPerLog: Int,
     @SerialName("time_per_log")   val timePerLog: Int = 1,
+    val type: String? = null,
 )

@@ -102,4 +102,7 @@ dependencies {
 
     // kotlinx.serialization
     implementation(libs.kotlinx.serialization.json)
+
+    // Unit tests
+    testImplementation(libs.junit)
 }
