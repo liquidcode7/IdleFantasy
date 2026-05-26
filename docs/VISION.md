@@ -28,7 +28,7 @@ Every material, crafted item, and enemy has an elemental type:
 Wheel (clockwise — each type beats the next two):
 
 ```
-Fire → Air → Ground → Lightning → Water → Ice → Dark → Light → Fire
+Fire → Dark → Ice → Light → Ground → Lightning → Air → Water → Fire
 ```
 
 - Strong against the next 2 types clockwise (1.5× damage)
