@@ -83,6 +83,23 @@ import kotlinx.coroutines.delay
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 
+@Composable
+private fun TypeChip(type: String?, modifier: Modifier = Modifier) {
+    if (type == null || type == "neutral") return
+    val label = type.replaceFirstChar { it.uppercase() }
+    Surface(
+        shape = RoundedCornerShape(4.dp),
+        color = MaterialTheme.colorScheme.secondaryContainer,
+        modifier = modifier,
+    ) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelSmall,
+            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
+        )
+    }
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CombatScreen(
@@ -238,6 +255,7 @@ fun CombatScreen(
                 skillLevels       = state.skillLevels,
                 equippedWeapon    = state.equippedWeapon,
                 inventory         = state.inventory,
+                enemies           = viewModel.enemyMap,
                 availableSpells   = viewModel.availableSpells(state.skillLevels),
                 selectedSpell     = state.selectedSpell,
                 availablePotions  = state.availablePotions,
@@ -546,6 +564,7 @@ private fun DungeonRow(
                 fontWeight = FontWeight.Medium,
                 color      = if (unlocked) MaterialTheme.colorScheme.onSurface else dimColor,
             )
+            TypeChip(dungeon.primaryType, modifier = Modifier.padding(top = 2.dp))
             Text(
                 text     = GameStrings.dungeonDesc(context, dungeon.name).takeIf { it.isNotBlank() } ?: dungeon.description,
                 style    = MaterialTheme.typography.bodySmall,
@@ -1063,6 +1082,7 @@ private fun DungeonInfoSheet(
     skillLevels: Map<String, Int>,
     equippedWeapon: EquipmentData?,
     inventory: Map<String, Int>,
+    enemies: Map<String, EnemyData>,
     availableSpells: List<SpellData>,
     selectedSpell: SpellData?,
     availablePotions: Map<String, Int>,
@@ -1135,10 +1155,16 @@ private fun DungeonInfoSheet(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             dungeon.enemySpawns.forEach { spawn ->
-                Text(
-                    text  = "• ${GameStrings.itemName(context, spawn.enemy)}",
-                    style = MaterialTheme.typography.bodySmall,
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        text  = "• ${GameStrings.itemName(context, spawn.enemy)}",
+                        style = MaterialTheme.typography.bodySmall,
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    TypeChip(enemies[spawn.enemy]?.type)
+                }
             }
             Spacer(Modifier.height(12.dp))
         }
