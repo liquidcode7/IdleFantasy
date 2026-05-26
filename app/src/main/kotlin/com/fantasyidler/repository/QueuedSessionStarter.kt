@@ -307,6 +307,7 @@ class QueuedSessionStarter @Inject constructor(
                     petBoostPct         = combatPetBoost(player.pets),
                     equippedFood        = availableFood,
                     foodHealValues      = gameData.foodHealValues,
+                    playerWeaponType    = weapon?.type,
                 )
                 val totalKills = result.frames.sumOf { it.kills }
                 if (combatStyle == "magic" && spell != null && totalKills > 0) {

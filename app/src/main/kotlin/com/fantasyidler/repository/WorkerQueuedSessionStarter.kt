@@ -268,6 +268,7 @@ class WorkerQueuedSessionStarter @Inject constructor(
                     petBoostPct         = 0,
                     equippedFood        = availableFood,
                     foodHealValues      = gameData.foodHealValues,
+                    playerWeaponType    = weapon?.type,
                 )
                 startSession(action, result.frames, durationMs, efficiencyMultiplier)
             }

@@ -298,6 +298,7 @@ class CombatViewModel @Inject constructor(
                     foodHealValues      = foodHealValues,
                     potionBonuses       = potionBonuses,
                     availableArrows     = availableArrows,
+                    playerWeaponType    = weapon?.type,
                 )
 
                 val totalAttacks = result.frames.size * CombatSimulator.TICKS_PER_FRAME
