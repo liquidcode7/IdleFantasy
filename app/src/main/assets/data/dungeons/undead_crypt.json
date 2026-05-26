@@ -4,6 +4,7 @@
   "description": "An ancient burial ground where the dead refuse to rest. Beware the dark magic!",
   "recommended_level": 12,
   "encounter_rate": 0.28,
+  "primary_type": "dark",
   "enemy_spawns": [
     {
       "enemy": "skeleton",

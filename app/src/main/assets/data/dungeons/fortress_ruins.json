@@ -4,6 +4,7 @@
   "description": "The crumbling remains of an ancient castle, now guarded by knights and soldiers.",
   "recommended_level": 18,
   "encounter_rate": 0.3,
+  "primary_type": "neutral",
   "enemy_spawns": [
     {
       "enemy": "guard",

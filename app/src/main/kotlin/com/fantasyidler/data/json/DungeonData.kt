@@ -11,6 +11,7 @@ data class DungeonData(
     @SerialName("recommended_level") val recommendedLevel: Int,
     @SerialName("encounter_rate") val encounterRate: Double,
     @SerialName("enemy_spawns") val enemySpawns: List<EnemySpawn>,
+    @SerialName("primary_type") val primaryType: String? = null,
 )
 
 @Serializable

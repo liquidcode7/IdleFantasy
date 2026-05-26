@@ -4,6 +4,7 @@
   "description": "A hideout of thieves and rogues in the wilderness. Watch your coin purse!",
   "recommended_level": 8,
   "encounter_rate": 0.26,
+  "primary_type": "neutral",
   "enemy_spawns": [
     {
       "enemy": "rogue",

@@ -4,6 +4,7 @@
   "description": "A fortified orc settlement deep in the mountains. Only the brave dare enter.",
   "recommended_level": 22,
   "encounter_rate": 0.32,
+  "primary_type": "ground",
   "enemy_spawns": [
     {
       "enemy": "orc_warrior",

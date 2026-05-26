@@ -4,6 +4,7 @@
   "description": "An ancient temple guarded by the most powerful creatures in the realm. Only the strongest warriors dare enter.",
   "recommended_level": 65,
   "encounter_rate": 0.48,
+  "primary_type": "light",
   "enemy_spawns": [
     {
       "enemy": "ancient_guardian",

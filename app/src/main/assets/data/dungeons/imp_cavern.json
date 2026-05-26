@@ -4,6 +4,7 @@
   "description": "A shallow cave filled with mischievous imps. Perfect for absolute beginners!",
   "recommended_level": 1,
   "encounter_rate": 0.2,
+  "primary_type": "fire",
   "enemy_spawns": [
     {
       "enemy": "imp",

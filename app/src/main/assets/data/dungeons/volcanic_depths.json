@@ -4,6 +4,7 @@
   "description": "A scorching cavern inhabited by hellhounds and lesser demons. The heat is unbearable!",
   "recommended_level": 28,
   "encounter_rate": 0.35,
+  "primary_type": "fire",
   "enemy_spawns": [
     {
       "enemy": "hellhound",

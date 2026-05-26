@@ -4,6 +4,7 @@
   "description": "A fortress of fire and brimstone, ruled by demons and hellhounds. The heat alone can kill the unprepared.",
   "recommended_level": 50,
   "encounter_rate": 0.42,
+  "primary_type": "fire",
   "enemy_spawns": [
     {
       "enemy": "fire_giant",
