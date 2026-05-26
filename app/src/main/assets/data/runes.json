@@ -5,7 +5,8 @@
     "essence_cost": 1,
     "xp_per_rune": 5,
     "time_per_rune": 1,
-    "description": "A rune used to cast air spells."
+    "description": "A rune used to cast air spells.",
+    "type": "air"
   },
   "water_rune": {
     "display_name": "Water Rune",
@@ -13,7 +14,8 @@
     "essence_cost": 1,
     "xp_per_rune": 6,
     "time_per_rune": 1,
-    "description": "A rune used to cast water spells."
+    "description": "A rune used to cast water spells.",
+    "type": "water"
   },
   "earth_rune": {
     "display_name": "Earth Rune",
@@ -21,7 +23,8 @@
     "essence_cost": 1,
     "xp_per_rune": 7,
     "time_per_rune": 1,
-    "description": "A rune used to cast earth spells."
+    "description": "A rune used to cast earth spells.",
+    "type": "ground"
   },
   "fire_rune": {
     "display_name": "Fire Rune",
@@ -29,7 +32,8 @@
     "essence_cost": 1,
     "xp_per_rune": 8,
     "time_per_rune": 1,
-    "description": "A rune used to cast fire spells."
+    "description": "A rune used to cast fire spells.",
+    "type": "fire"
   },
   "mind_rune": {
     "display_name": "Mind Rune",
@@ -37,7 +41,8 @@
     "essence_cost": 1,
     "xp_per_rune": 10,
     "time_per_rune": 1,
-    "description": "A rune used to cast mind spells."
+    "description": "A rune used to cast mind spells.",
+    "type": "neutral"
   },
   "chaos_rune": {
     "display_name": "Chaos Rune",
@@ -45,7 +50,8 @@
     "essence_cost": 1,
     "xp_per_rune": 12,
     "time_per_rune": 1,
-    "description": "A rune used to cast chaos spells."
+    "description": "A rune used to cast chaos spells.",
+    "type": "dark"
   },
   "death_rune": {
     "display_name": "Death Rune",
@@ -53,7 +59,8 @@
     "essence_cost": 1,
     "xp_per_rune": 15,
     "time_per_rune": 1,
-    "description": "A rune used to cast death spells."
+    "description": "A rune used to cast death spells.",
+    "type": "dark"
   },
   "blood_rune": {
     "display_name": "Blood Rune",
@@ -61,6 +68,7 @@
     "essence_cost": 1,
     "xp_per_rune": 20,
     "time_per_rune": 1,
-    "description": "A rune used to cast blood spells."
+    "description": "A rune used to cast blood spells.",
+    "type": "fire"
   }
 }
