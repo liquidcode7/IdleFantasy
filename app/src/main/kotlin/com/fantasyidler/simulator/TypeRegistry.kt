@@ -24,7 +24,14 @@ object TypeRegistry {
     private var weakMultiplier: Float = 0.67f
     private var neutralMultiplier: Float = 1.0f
 
-    /** Call once on app start before any [multiplier] queries. */
+    /**
+     * Call once on app start before any [multiplier] queries.
+     *
+     * Intentionally overwrites existing state so that unit tests can
+     * re-initialise the singleton with different data in `@Before` blocks
+     * without needing a separate reset function.  Production code has exactly
+     * one call site: [com.fantasyidler.FantasyIdlerApp.onCreate].
+     */
     fun init(data: TypeEffectivenessData) {
         wheelOrder = data.wheelOrder
         strongMultiplier = data.strongMultiplier

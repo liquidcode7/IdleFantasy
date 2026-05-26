@@ -5,8 +5,7 @@
     "log_display_name": "Log",
     "level_required": 1,
     "xp_per_log": 25,
-    "time_per_log": 1,
-    "type": "ground"
+    "time_per_log": 1
   },
   "oak_tree": {
     "display_name": "Oak Tree",
@@ -14,8 +13,7 @@
     "log_display_name": "Oak Log",
     "level_required": 15,
     "xp_per_log": 38,
-    "time_per_log": 1,
-    "type": "ground"
+    "time_per_log": 1
   },
   "willow_tree": {
     "display_name": "Willow Tree",
@@ -23,8 +21,7 @@
     "log_display_name": "Willow Log",
     "level_required": 30,
     "xp_per_log": 68,
-    "time_per_log": 1,
-    "type": "water"
+    "time_per_log": 1
   },
   "maple_tree": {
     "display_name": "Maple Tree",
@@ -32,8 +29,7 @@
     "log_display_name": "Maple Log",
     "level_required": 45,
     "xp_per_log": 100,
-    "time_per_log": 1,
-    "type": "air"
+    "time_per_log": 1
   },
   "yew_tree": {
     "display_name": "Yew Tree",
@@ -41,8 +37,7 @@
     "log_display_name": "Yew Log",
     "level_required": 60,
     "xp_per_log": 175,
-    "time_per_log": 1,
-    "type": "light"
+    "time_per_log": 1
   },
   "magic_tree": {
     "display_name": "Magic Tree",
@@ -50,8 +45,7 @@
     "log_display_name": "Magic Log",
     "level_required": 75,
     "xp_per_log": 250,
-    "time_per_log": 1,
-    "type": "dark"
+    "time_per_log": 1
   },
   "redwood_tree": {
     "display_name": "Redwood Tree",
@@ -59,7 +53,6 @@
     "log_display_name": "Redwood Log",
     "level_required": 90,
     "xp_per_log": 380,
-    "time_per_log": 1,
-    "type": "fire"
+    "time_per_log": 1
   }
 }

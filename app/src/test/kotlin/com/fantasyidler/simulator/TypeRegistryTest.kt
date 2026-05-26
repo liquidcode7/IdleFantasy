@@ -91,6 +91,26 @@ class TypeRegistryTest {
     @Test fun `unknown type is neutral`() =
         assertEquals(1.0f, TypeRegistry.multiplier("fire", "cheese"), 0.001f)
 
+    // --- Attacker coverage for ice and air (previously untested as attackers) ---
+
+    @Test fun `ice beats light`() =
+        assertEquals(1.5f, TypeRegistry.multiplier("ice", "light"), 0.001f)
+
+    @Test fun `ice beats ground`() =
+        assertEquals(1.5f, TypeRegistry.multiplier("ice", "ground"), 0.001f)
+
+    @Test fun `air beats water`() =
+        assertEquals(1.5f, TypeRegistry.multiplier("air", "water"), 0.001f)
+
+    @Test fun `air beats fire`() =
+        assertEquals(1.5f, TypeRegistry.multiplier("air", "fire"), 0.001f)
+
+    @Test fun `ice loses to fire`() =
+        assertEquals(0.67f, TypeRegistry.multiplier("ice", "fire"), 0.001f)
+
+    @Test fun `air loses to lightning`() =
+        assertEquals(0.67f, TypeRegistry.multiplier("air", "lightning"), 0.001f)
+
     // --- isValidType ---
 
     @Test fun `fire is a valid type`() =
