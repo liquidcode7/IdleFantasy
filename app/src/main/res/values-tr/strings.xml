@@ -83,6 +83,7 @@
     <string name="label_ready_to_harvest">Hasada hazır</string>
     <string name="label_empty">Boş</string>
     <string name="label_combat_style">Savaş Tipi</string>
+    <string name="label_weapon_type">Silah Türü</string>
     <string name="label_active_spell">Aktif Büyü</string>
     <string name="label_drops">Düşen Ganimetler</string>
     <string name="label_boss">Patron</string>

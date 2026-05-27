@@ -3,11 +3,23 @@ package com.fantasyidler.repository
 import com.fantasyidler.data.json.EquipmentData
 import com.fantasyidler.data.json.FletchingRecipe
 import com.fantasyidler.data.json.SmithingRecipe
+import com.fantasyidler.data.json.TypeEffectivenessData
+import com.fantasyidler.simulator.TypeRegistry
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
+import org.junit.Before
 import org.junit.Test
 
 class WeaponTypeMergeTest {
+
+    @Before fun initTypeRegistry() {
+        TypeRegistry.init(TypeEffectivenessData(
+            wheelOrder = listOf("fire", "dark", "ice", "light", "ground", "lightning", "air", "water"),
+            neutralMultiplier = 1.0f,
+            strongMultiplier = 1.5f,
+            weakMultiplier = 0.67f,
+        ))
+    }
 
     private val baseEquipment = mapOf(
         "bronze_dagger"   to EquipmentData(name = "bronze_dagger",   displayName = "Bronze Dagger",   slot = "weapon"),

@@ -1123,7 +1123,9 @@ private fun DungeonInfoSheet(
         equippedWeapon?.type?.takeIf { it != "neutral" }?.let { weaponType ->
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.padding(vertical = 2.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 2.dp),
             ) {
                 Text(
                     text  = stringResource(R.string.label_weapon_type),

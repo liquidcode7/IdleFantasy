@@ -83,6 +83,7 @@
     <string name="label_ready_to_harvest">Listo para cosechar</string>
     <string name="label_empty">Vacío</string>
     <string name="label_combat_style">Estilo de combate</string>
+    <string name="label_weapon_type">Tipo de arma</string>
     <string name="label_active_spell">Hechizo activo</string>
     <string name="label_drops">Drops</string>
     <string name="label_boss">Boss</string>

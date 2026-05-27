@@ -18,6 +18,7 @@ data class BossData(
     @SerialName("common_loot") val commonLoot: BossCommonLoot,
     @SerialName("rare_drops") val rareDrops: List<BossRareDrop>,
     val pet: BossPet? = null,
+    val type: String? = null,
 )
 
 @Serializable

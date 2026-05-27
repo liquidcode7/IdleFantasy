@@ -388,6 +388,7 @@ class CombatViewModel @Inject constructor(
                 val equippedFoodKeys  = flags.equippedFood.keys
                 val availableFood     = inventory.filterKeys { it in equippedFoodKeys }
 
+                val bossWeapon = equipped[EquipSlot.WEAPON]?.let { gameData.equipment[it] }
                 val bossFrames = simulateBoss(
                     boss              = boss,
                     bossKey           = bossKey,
@@ -399,6 +400,7 @@ class CombatViewModel @Inject constructor(
                     weaponStrBonus    = totalStrBonus,
                     equippedFood      = availableFood,
                     foodHealValues    = gameData.foodHealValues,
+                    playerWeaponType  = bossWeapon?.type,
                 )
                 val framesJson = json.encodeToString(
                     json.serializersModule.serializer<List<SessionFrame>>(),
@@ -617,6 +619,7 @@ class CombatViewModel @Inject constructor(
         weaponStrBonus: Int,
         equippedFood: Map<String, Int> = emptyMap(),
         foodHealValues: Map<String, Int> = emptyMap(),
+        playerWeaponType: String? = null,
     ): List<SessionFrame> = CombatSimulator.simulateBoss(
         boss              = boss,
         bossKey           = bossKey,
@@ -628,6 +631,7 @@ class CombatViewModel @Inject constructor(
         weaponStrBonus    = weaponStrBonus,
         equippedFood      = equippedFood,
         foodHealValues    = foodHealValues,
+        playerWeaponType  = playerWeaponType,
     )
 
     // ------------------------------------------------------------------

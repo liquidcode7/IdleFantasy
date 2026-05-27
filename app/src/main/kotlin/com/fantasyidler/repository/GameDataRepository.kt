@@ -27,6 +27,8 @@ import com.fantasyidler.data.json.SkillData
 import com.fantasyidler.data.json.SmithingRecipe
 import com.fantasyidler.data.json.SpellData
 import com.fantasyidler.data.json.TreeData
+import android.util.Log
+import com.fantasyidler.simulator.TypeRegistry
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.serialization.json.Json
 import javax.inject.Inject
@@ -282,12 +284,18 @@ class GameDataRepository @Inject constructor(
     }
 }
 
+private const val TAG = "mergeWeaponTypes"
+
 /**
  * Merges [elementType] from recipe data into the static equipment map.
  *
- * For each recipe key with a non-null [SmithingRecipe.elementType] or
- * [FletchingRecipe.elementType], overwrites [EquipmentData.type] on the
- * matching equipment entry. Keys absent from [equipment] are ignored silently.
+ * Rules:
+ * - Null [elementType] → no change (equipment type preserved).
+ * - `"neutral"` [elementType] → stored as `null` (neutral is the absence of type).
+ * - Unrecognised [elementType] (not in [TypeRegistry]) → logged as a warning, stored as `null`.
+ * - Valid, non-neutral [elementType] → written into [EquipmentData.type].
+ * - Fletching entries win over smithing entries on key collision (latter wins in buildMap).
+ * - Recipe keys absent from [equipment] are silently ignored.
  *
  * Internal so it can be unit-tested directly.
  */
@@ -297,8 +305,16 @@ internal fun mergeWeaponTypes(
     fletchingRecipes: Map<String, FletchingRecipe>,
 ): Map<String, EquipmentData> {
     val types = buildMap<String, String> {
-        smithingRecipes.forEach { (k, r) -> r.elementType?.let { put(k, it) } }
-        fletchingRecipes.forEach { (k, r) -> r.elementType?.let { put(k, it) } }
+        fun validated(key: String, raw: String?): String? {
+            if (raw == null || raw == "neutral") return null
+            if (!TypeRegistry.isValidType(raw)) {
+                Log.w(TAG, "Unknown element_type '$raw' for recipe '$key' — ignoring")
+                return null
+            }
+            return raw
+        }
+        smithingRecipes.forEach  { (k, r) -> validated(k, r.elementType)?.let { put(k, it) } }
+        fletchingRecipes.forEach { (k, r) -> validated(k, r.elementType)?.let { put(k, it) } }
     }
     return equipment.mapValues { (k, v) ->
         val t = types[k] ?: return@mapValues v

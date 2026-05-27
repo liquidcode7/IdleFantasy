@@ -83,6 +83,7 @@
     <string name="label_ready_to_harvest">Prêt à être récolté</string>
     <string name="label_empty">Vide</string>
     <string name="label_combat_style">Style de combat</string>
+    <string name="label_weapon_type">Type d\'arme</string>
     <string name="label_active_spell">Sort actif</string>
     <string name="label_drops">Butin</string>
     <string name="label_boss">Boss</string>

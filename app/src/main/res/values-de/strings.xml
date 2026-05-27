@@ -93,6 +93,7 @@
     <string name="inventory_cat_materials">Materialien</string>
     <string name="inventory_cat_other">Sonstiges</string>
     <string name="label_combat_style">Kampfstil</string>
+    <string name="label_weapon_type">Waffentyp</string>
     <string name="label_active_spell">Aktiver Zauber</string>
     <string name="label_drops">Drops</string>
     <string name="label_boss">Boss</string>

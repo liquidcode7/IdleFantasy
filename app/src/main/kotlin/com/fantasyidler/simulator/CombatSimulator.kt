@@ -273,9 +273,12 @@ object CombatSimulator {
         weaponStrBonus: Int,
         equippedFood: Map<String, Int> = emptyMap(),
         foodHealValues: Map<String, Int> = emptyMap(),
+        playerWeaponType: String? = null,
     ): List<SessionFrame> {
         val effStr      = playerStrength + weaponStrBonus
-        val playerMax   = max(1, 1 + effStr * (weaponStrBonus + 64) / 640)
+        val typeMult    = TypeRegistry.multiplier(playerWeaponType, boss.type)
+        val playerMax   = (max(1, 1 + effStr * (weaponStrBonus + 64) / 640) * typeMult)
+            .roundToInt().coerceAtLeast(1)
         val effAtk      = playerAttack + weaponAttackBonus
         val bossDefence = boss.defensiveStats.attackDefense
         val playerHitChance = when {

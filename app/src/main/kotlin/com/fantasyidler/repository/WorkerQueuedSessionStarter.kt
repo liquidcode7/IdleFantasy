@@ -217,6 +217,7 @@ class WorkerQueuedSessionStarter @Inject constructor(
                 val totalDefBonus = EquipSlot.COMBAT_SLOTS.sumOf { gameData.equipment[equipped[it]]?.defenseBonus  ?: 0 }
                 val equippedFoodKeys = flags.equippedFood.keys
                 val availableFood    = inventory.filterKeys { it in equippedFoodKeys }
+                val bossWeapon = equipped[EquipSlot.WEAPON]?.let { gameData.equipment[it] }
                 val bossFrames = CombatSimulator.simulateBoss(
                     boss              = boss,
                     bossKey           = bossKey,
@@ -228,6 +229,7 @@ class WorkerQueuedSessionStarter @Inject constructor(
                     weaponStrBonus    = totalStrBonus,
                     equippedFood      = availableFood,
                     foodHealValues    = gameData.foodHealValues,
+                    playerWeaponType  = bossWeapon?.type,
                 )
                 startSession(action, bossFrames, durationMs, efficiencyMultiplier)
             }
