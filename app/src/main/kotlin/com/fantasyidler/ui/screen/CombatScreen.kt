@@ -1120,6 +1120,20 @@ private fun DungeonInfoSheet(
             valueColor = if (canEnter) GoldPrimary else MaterialTheme.colorScheme.error)
         StatRow(label = stringResource(R.string.combat_your_level), value = combatLvl.toString())
         StatRow(label = stringResource(R.string.label_combat_style), value = styleLabel, valueColor = GoldPrimary)
+        equippedWeapon?.type?.takeIf { it != "neutral" }?.let { weaponType ->
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(vertical = 2.dp),
+            ) {
+                Text(
+                    text  = stringResource(R.string.label_weapon_type),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f),
+                )
+                TypeChip(weaponType)
+            }
+        }
 
         // Ranged: arrow info
         if (combatStyle == "ranged") {

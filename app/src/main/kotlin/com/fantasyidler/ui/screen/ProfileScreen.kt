@@ -61,6 +61,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.fantasyidler.R
 import com.fantasyidler.data.json.CookingRecipe
 import com.fantasyidler.data.model.EquipSlot
+import com.fantasyidler.ui.components.TypeChip
 import com.fantasyidler.ui.theme.GoldPrimary
 import com.fantasyidler.ui.viewmodel.Achievement
 import com.fantasyidler.ui.viewmodel.AchievementsViewModel
@@ -876,6 +877,10 @@ private fun EquipPickerSheet(
                             displayName,
                             style = MaterialTheme.typography.bodyLarge,
                         )
+                        // Show type chip for typed weapons
+                        if (item.slot == EquipSlot.WEAPON) {
+                            TypeChip(item.type, modifier = Modifier.padding(top = 2.dp))
+                        }
                         val detail = buildEquipDetail(item, context)
                         if (detail.isNotEmpty()) {
                             Text(
