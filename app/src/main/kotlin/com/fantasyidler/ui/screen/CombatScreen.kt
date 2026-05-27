@@ -75,6 +75,7 @@ import com.fantasyidler.ui.viewmodel.CombatSessionResult
 import com.fantasyidler.ui.viewmodel.CombatViewModel
 import com.fantasyidler.ui.viewmodel.combatLevelFrom
 import com.fantasyidler.ui.viewmodel.xpProgressFraction
+import com.fantasyidler.ui.components.TypeChip
 import com.fantasyidler.util.GameStrings
 import com.fantasyidler.util.formatCoins
 import com.fantasyidler.util.formatXp
@@ -82,23 +83,6 @@ import com.fantasyidler.util.toCountdown
 import kotlinx.coroutines.delay
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-
-@Composable
-private fun TypeChip(type: String?, modifier: Modifier = Modifier) {
-    if (type == null || type == "neutral") return
-    val label = type.replaceFirstChar { it.uppercase() }
-    Surface(
-        shape = RoundedCornerShape(4.dp),
-        color = MaterialTheme.colorScheme.secondaryContainer,
-        modifier = modifier,
-    ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.labelSmall,
-            modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp),
-        )
-    }
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
